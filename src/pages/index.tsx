@@ -1,15 +1,18 @@
 import { NextPage } from 'next';
-import { MainLayout, ProductCard } from 'components';
-import { ProductsContainer } from 'styles';
+import { MainLayout, ProductCard, HomeHeader } from 'components';
+import { ProductsContainer, HomeWrapper } from 'styles';
 
 const HomePage: NextPage = () => {
   return (
     <MainLayout title="Home" pageDescription="Mayoral home page">
-      <ProductsContainer columns={2}>
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-      </ProductsContainer>
+      <HomeWrapper>
+        <HomeHeader />
+        <ProductsContainer columns={2}>
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+        </ProductsContainer>
+      </HomeWrapper>
     </MainLayout>
   );
 };

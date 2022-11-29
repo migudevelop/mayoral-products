@@ -1,6 +1,5 @@
 import { FC, PropsWithChildren } from 'react';
 import Head from 'next/head';
-import { Header } from 'components';
 
 interface Props {
   title: string;
@@ -14,7 +13,6 @@ const MainLayout: FC<PropsWithChildren<Props>> = ({ children, title, pageDescrip
         <title>{title} - Mayoral</title>
         <meta name="description" content={pageDescription} />
       </Head>
-      <Header />
       <main>{children}</main>
     </>
   );

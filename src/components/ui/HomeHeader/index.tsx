@@ -1,12 +1,12 @@
 import { FC } from 'react';
 import { SearchBar, ColumnsController } from 'components';
-import { HeaderWrapper } from './styles';
+import { HomeWrapper } from './styles';
 
-const Header: FC = () => (
-  <HeaderWrapper>
+const HomeHeader: FC = () => (
+  <HomeWrapper>
     <SearchBar />
     <ColumnsController />
-  </HeaderWrapper>
+  </HomeWrapper>
 );
 
-export default Header;
+export default HomeHeader;
