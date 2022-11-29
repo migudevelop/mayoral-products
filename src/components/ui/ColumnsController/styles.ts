@@ -6,7 +6,7 @@ const ColorButtons = ({ theme }) =>
     color: ${theme.secondaryColor};
   `;
 
-export const OrderButtonsWrapper = styled.div`
+export const ColumnsControllerWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
