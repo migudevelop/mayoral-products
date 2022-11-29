@@ -15,6 +15,10 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Verdana', 'Montserrat', sans-serif !important;
         margin: 0;
     }
+
+    header, main{
+        margin: 0 3rem;
+    }
 `;
 
 export default memo(GlobalStyle);
