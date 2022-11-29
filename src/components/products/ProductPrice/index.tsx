@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { ProductPriceWrapper, ProductPriceStyled, ProductDiscountStyled } from './styles';
-import { formats } from 'utils';
+import { formats, helpers } from 'utils';
 
 type Props = {
   price: number;
@@ -13,7 +13,7 @@ const ProductPrice: FC<Props> = ({ price, discount }) => {
       <ProductPriceStyled>{formats.numberToCurrency({ number: price })}</ProductPriceStyled>
       {discount && (
         <ProductDiscountStyled>
-          {formats.numberToCurrency({ number: discount })}
+          {formats.numberToCurrency({ number: helpers.calculatePriceWithOffer(price, discount) })}
         </ProductDiscountStyled>
       )}
     </ProductPriceWrapper>

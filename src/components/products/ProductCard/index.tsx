@@ -12,7 +12,7 @@ const ProductCard: FC = () => {
 					Chaquetón con borrego para recién nacido
 	        	"
         />
-        <ProductPrice price={20} />
+        <ProductPrice price={20} discount={40} />
         <Button text="Añadir" onClick={() => console.log('hola')} />
       </ProductCardContent>
     </ProductCardWrapper>

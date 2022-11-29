@@ -11,6 +11,7 @@ export const ButtonStyled = styled.button`
   user-select: none;
   cursor: pointer;
   background-color: ${({ theme }) => theme.primaryColor};
+  color: ${({ theme }) => theme.textColor};
   :focus {
     outline: 0;
   }
