@@ -2,10 +2,11 @@ import { Select } from 'components';
 import { useUiState } from 'providers';
 import { FC, memo } from 'react';
 import { OrderProductsWrapper } from './styles';
+import { constants } from 'utils';
 
 const OPTIONS = [
-  { label: 'Precio DESC', value: 'DESC' },
-  { label: 'Precio ASC', value: 'ASC' },
+  { label: 'Precio DESC', value: constants.DESC_ORDER },
+  { label: 'Precio ASC', value: constants.ASC_ORDER },
 ];
 
 const OrderProducts: FC = () => {
