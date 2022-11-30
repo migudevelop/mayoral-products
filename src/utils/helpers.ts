@@ -1,5 +1,5 @@
 import { ProductElement, ProductOrder } from 'interfaces';
-import { constants } from 'utils';
+import { constants } from './';
 
 export const calculatePriceWithOffer = (price: number, discount: number): number =>
   price - (price * discount) / 100;
