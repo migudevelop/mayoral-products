@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import { ProductPriceTextProps } from 'interfaces';
+import styled, { css } from 'styled-components';
 
 export const ProductPriceWrapper = styled.section`
   display: flex;
@@ -9,8 +10,13 @@ export const ProductPriceWrapper = styled.section`
   flex-grow: 1;
 `;
 
-export const ProductPriceStyled = styled.label`
+export const ProductPriceStyled = styled.label<ProductPriceTextProps>`
   color: ${({ theme }) => theme.secondaryColor};
+  ${({ haveDiscount }) =>
+    haveDiscount &&
+    css`
+      text-decoration: line-through;
+    `}
 `;
 export const ProductDiscountStyled = styled.label`
   color: ${({ theme }) => theme.terciaryColor};

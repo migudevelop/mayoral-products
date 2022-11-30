@@ -8,9 +8,12 @@ interface Props {
 }
 
 const ProductPrice: FC<Props> = ({ price, discount }) => {
+  const haveDiscount = discount > 0;
   return (
     <ProductPriceWrapper>
-      <ProductPriceStyled>{formats.numberToCurrency({ number: price })}</ProductPriceStyled>
+      <ProductPriceStyled haveDiscount={haveDiscount}>
+        {formats.numberToCurrency({ number: price })}
+      </ProductPriceStyled>
       {discount && (
         <ProductDiscountStyled>
           {`${formats.numberToCurrency({
