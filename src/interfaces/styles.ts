@@ -6,3 +6,9 @@ export interface Theme {
   secondaryColor: string;
   terciaryColor: string;
 }
+
+export interface MediaQueries {
+  mobile: string;
+  tablet: string;
+  desktop: string;
+}

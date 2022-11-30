@@ -1,13 +1,15 @@
-import { FC } from 'react';
+import { useUiState } from 'providers';
+import { FC, memo } from 'react';
 import { ColumnsControllerWrapper, PlusIconStyled, MinusIconStyled } from './styles';
 
 const ColumnsController: FC = () => {
+  const { setZoomProducts } = useUiState();
   return (
     <ColumnsControllerWrapper>
-      <MinusIconStyled />
-      <PlusIconStyled />
+      <MinusIconStyled onClick={() => setZoomProducts('MIN')} />
+      <PlusIconStyled onClick={() => setZoomProducts('MAX')} />
     </ColumnsControllerWrapper>
   );
 };
 
-export default ColumnsController;
+export default memo(ColumnsController);

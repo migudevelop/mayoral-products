@@ -12,6 +12,7 @@ export const ProductCardContent = styled.div`
   border-radius: 0.5rem;
   padding: 1rem 0.5rem;
   row-gap: 1rem;
+  text-align: center;
 `;
 
 export const MoreColorsStyled = styled.label`

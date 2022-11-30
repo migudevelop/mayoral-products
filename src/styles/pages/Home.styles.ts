@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { styleHelpers } from 'utils';
 
 export const HomeWrapper = styled.section`
   display: flex;
@@ -7,8 +8,19 @@ export const HomeWrapper = styled.section`
   margin: 1.5rem 0;
 `;
 
-const ProductsContainerGrid = ({ columns }: { columns: number }) =>
-  `grid-template-columns: repeat(${columns}, minmax(calc(${100 / columns}% - 16px), auto));`;
+const ProductsContainerGrid = ({ isMaxZoom }: { isMaxZoom: boolean }) => {
+  const columnsMobile = isMaxZoom ? 3 : 2;
+  const columnsDesktop = isMaxZoom ? 4 : 3;
+  return `grid-template-columns: repeat(${columnsMobile}, minmax(calc(${
+    100 / columnsMobile
+  }% - 16px), auto));
+  ${styleHelpers.MEDIAQUERIES.desktop}{
+    grid-template-columns: repeat(${columnsDesktop}, minmax(calc(${
+    100 / columnsDesktop
+  }% - 16px), auto));
+  }
+  `;
+};
 
 export const ProductsContainer = styled.section`
   display: grid;

@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import { Input } from 'components';
 import { SearchBarWrapper, SearchIconStyled } from './styles';
 
@@ -11,4 +11,4 @@ const SearchBar: FC = () => {
   );
 };
 
-export default SearchBar;
+export default memo(SearchBar);
