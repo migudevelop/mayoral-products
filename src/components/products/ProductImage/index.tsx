@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import { ProductImageWrapper, ProductImageStyled, ProductImageTextStyled } from './styles';
 
 interface Props {
@@ -16,4 +16,4 @@ const ProductCard: FC<Props> = ({ src, alt = '', imgText }) => {
   );
 };
 
-export default ProductCard;
+export default memo(ProductCard);

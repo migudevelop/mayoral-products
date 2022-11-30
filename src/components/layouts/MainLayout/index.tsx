@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren } from 'react';
+import { FC, memo, PropsWithChildren } from 'react';
 import Head from 'next/head';
 
 interface Props {
@@ -18,4 +18,4 @@ const MainLayout: FC<PropsWithChildren<Props>> = ({ children, title, pageDescrip
   );
 };
 
-export default MainLayout;
+export default memo(MainLayout);

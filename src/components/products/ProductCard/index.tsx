@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import { Button, ProductImage, ProductPrice } from 'components';
 import { ProductCardContent, MoreColorsStyled } from './styles';
 import { ProductElement } from 'interfaces';
@@ -21,4 +21,4 @@ const ProductCard: FC<Props> = ({ product }) => {
   );
 };
 
-export default ProductCard;
+export default memo(ProductCard);

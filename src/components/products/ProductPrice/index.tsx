@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import { ProductPriceWrapper, ProductPriceStyled, ProductDiscountStyled } from './styles';
 import { formats, helpers } from 'utils';
 
@@ -22,4 +22,4 @@ const ProductPrice: FC<Props> = ({ price, discount }) => {
   );
 };
 
-export default ProductPrice;
+export default memo(ProductPrice);
