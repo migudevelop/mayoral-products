@@ -4,21 +4,21 @@ import { ProductsContainer, HomeWrapper } from 'styles';
 import { ProductElement } from 'interfaces';
 import { useUiState } from 'providers';
 import { productsApi } from 'api';
-import { constants } from 'utils';
+import { constants, helpers } from 'utils';
 
 interface Props {
   products: ProductElement[];
 }
 
 const HomePage: NextPage<Props> = ({ products }) => {
-  const { zoomProducts } = useUiState();
+  const { zoomProducts, productOrder } = useUiState();
 
   return (
     <MainLayout title="Home" pageDescription="Mayoral home page">
       <HomeWrapper>
         <HomeHeader />
         <ProductsContainer isMaxZoom={zoomProducts === constants.MAX_ZOOM}>
-          {products?.sort().map((product) => (
+          {helpers.sortProductsByPrice(products, productOrder)?.map((product) => (
             <ProductCard key={product?.id} product={product} />
           ))}
         </ProductsContainer>

@@ -13,8 +13,8 @@ export interface UIState {
 }
 
 export interface UIContextProps {
-  zoomProducts: string;
-  productOrder: string;
-  setZoomProducts: (zoom: string) => void;
-  setProductOrder: (order: string) => void;
+  zoomProducts: ZoomProducts;
+  productOrder: ProductOrder;
+  setZoomProducts: (zoom: ZoomProducts) => void;
+  setProductOrder: (order: ProductOrder) => void;
 }
