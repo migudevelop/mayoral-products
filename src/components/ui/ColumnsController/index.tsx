@@ -4,11 +4,15 @@ import { constants } from 'utils';
 import { ColumnsControllerWrapper, PlusIconStyled, MinusIconStyled } from './styles';
 
 const ColumnsController: FC = () => {
-  const { setZoomProducts } = useUiState();
+  const { zoomProducts, setZoomProducts } = useUiState();
+  const haveMaxZoom = zoomProducts === constants.MAX_ZOOM;
   return (
     <ColumnsControllerWrapper>
-      <MinusIconStyled onClick={() => setZoomProducts(constants.MIN_ZOOM)} />
-      <PlusIconStyled onClick={() => setZoomProducts(constants.MAX_ZOOM)} />
+      <MinusIconStyled
+        disabled={!haveMaxZoom}
+        onClick={() => setZoomProducts(constants.MIN_ZOOM)}
+      />
+      <PlusIconStyled disabled={haveMaxZoom} onClick={() => setZoomProducts(constants.MAX_ZOOM)} />
     </ColumnsControllerWrapper>
   );
 };

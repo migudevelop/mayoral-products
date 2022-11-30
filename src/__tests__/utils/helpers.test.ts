@@ -3,8 +3,8 @@ import { ProductElement } from 'interfaces';
 
 describe('Calculate price with calculatePriceWithOffer function', () => {
   test('Calculate price', () => {
-    const result = 17;
-    expect(helpers.calculatePriceWithOffer(20, 30)).toStrictEqual(result);
+    const result = 24;
+    expect(helpers.calculatePriceWithOffer(30, 20)).toBe(result);
   });
 });
 

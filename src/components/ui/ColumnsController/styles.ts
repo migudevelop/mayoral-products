@@ -15,9 +15,18 @@ export const ColumnsControllerWrapper = styled.div`
   ${ColorButtons}
 `;
 
+const DisabledButton = ({ disabled }: { disabled: boolean }) =>
+  disabled &&
+  css`
+    pointer-events: none;
+    opacity: 0.4;
+  `;
+
 const CommonIconsStyled = css`
   width: 2rem;
   height: 2rem;
+  cursor: pointer;
+  ${DisabledButton}
 `;
 
 export const PlusIconStyled = styled(FaPlus)`
