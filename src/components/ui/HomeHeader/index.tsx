@@ -1,10 +1,11 @@
 import { FC, memo } from 'react';
-import { SearchBar, ColumnsController } from 'components';
+import { SearchBar, ColumnsController, OrderElements } from 'components';
 import { HomeWrapper } from './styles';
 
 const HomeHeader: FC = () => (
   <HomeWrapper>
     <SearchBar />
+    <OrderElements />
     <ColumnsController />
   </HomeWrapper>
 );
