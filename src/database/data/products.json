@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Trenka para recién nacido",
+      "image": "https://media.mayoral.com/wcsstore/mayoral/images/catalog/mayoral/trenka-para-recien-nacido_id_12-02408-079-M-4.JPG",
+      "moreColors": true,
+      "price": 35,
+      "discount": 0
+    },
+    {
+      "id": 2,
+      "name": "Chaquetón con borrego para recién nacido",
+      "image": "https://media.mayoral.com/wcsstore/mayoral/images/catalog/mayoral/trenka-para-recien-nacido_id_12-02408-079-M-4.JPG",
+      "moreColors": false,
+      "price": 20,
+      "discount": 15
+    },
+    {
+      "id": 3,
+      "name": "Chaquetón reversible para recién nacido ECOFRIENDS",
+      "image": "https://media.mayoral.com/wcsstore/mayoral/images/catalog/mayoral/trenka-para-recien-nacido_id_12-02408-079-M-4.JPG",
+      "moreColors": true,
+      "price": 31,
+      "discount": 0
+    },
+    {
+      "id": 4,
+      "name": "Chaquetón reversible para recién nacido ECOFRIENDS",
+      "image": "https://media.mayoral.com/wcsstore/mayoral/images/catalog/mayoral/trenka-para-recien-nacido_id_12-02408-079-M-4.JPG",
+      "moreColors": false,
+      "price": 19,
+      "discount": 20
+    },
+    {
+      "id": 5,
+      "name": "Camiseta manga larga",
+      "image": "https://media.mayoral.com/wcsstore/mayoral/images/catalog/mayoral/trenka-para-recien-nacido_id_12-02408-079-M-4.JPG",
+      "moreColors": true,
+      "price": 22,
+      "discount": 20
+    },
+    {
+      "id": 6,
+      "name": "Chaquetón con borrego para recién nacido",
+      "image": "https://media.mayoral.com/wcsstore/mayoral/images/catalog/mayoral/trenka-para-recien-nacido_id_12-02408-079-M-4.JPG",
+      "moreColors": true,
+      "price": 27,
+      "discount": 20
+    },
+    {
+      "id": 7,
+      "name": "Trenka para recién nacido",
+      "image": "https://media.mayoral.com/wcsstore/mayoral/images/catalog/mayoral/trenka-para-recien-nacido_id_12-02408-079-M-4.JPG",
+      "moreColors": true,
+      "price": 30,
+      "discount": 20
+    }
+  ]
+}

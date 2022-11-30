@@ -3,6 +3,9 @@
  */
 const config = {
   reactStrictMode: true,
+  images: {
+    domains: ['media.mayoral.com'],
+  },
   compiler: {
     styledComponents: true,
   },

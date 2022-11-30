@@ -15,4 +15,5 @@ export const ProductImageTextStyled = styled.figcaption`
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  text-align: center;
 `;

@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import { ProductImageWrapper, ProductImageStyled, ProductImageTextStyled } from './styles';
 
-type Props = {
+interface Props {
   src?: string;
   alt?: string;
   imgText?: string;
-};
+}
 
 const ProductCard: FC<Props> = ({ src, alt = '', imgText }) => {
   return (

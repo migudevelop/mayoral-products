@@ -13,3 +13,7 @@ export const ProductCardContent = styled.div`
   padding: 1rem 0.5rem;
   row-gap: 1rem;
 `;
+
+export const MoreColorsStyled = styled.label`
+  color: ${({ theme }) => theme.secondaryColor};
+`;

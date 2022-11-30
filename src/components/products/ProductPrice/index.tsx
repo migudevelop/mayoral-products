@@ -2,10 +2,10 @@ import { FC } from 'react';
 import { ProductPriceWrapper, ProductPriceStyled, ProductDiscountStyled } from './styles';
 import { formats, helpers } from 'utils';
 
-type Props = {
+interface Props {
   price: number;
   discount?: number;
-};
+}
 
 const ProductPrice: FC<Props> = ({ price, discount }) => {
   return (
@@ -13,7 +13,9 @@ const ProductPrice: FC<Props> = ({ price, discount }) => {
       <ProductPriceStyled>{formats.numberToCurrency({ number: price })}</ProductPriceStyled>
       {discount && (
         <ProductDiscountStyled>
-          {formats.numberToCurrency({ number: helpers.calculatePriceWithOffer(price, discount) })}
+          {`${formats.numberToCurrency({
+            number: helpers.calculatePriceWithOffer(price, discount),
+          })}(-${discount}%)`}
         </ProductDiscountStyled>
       )}
     </ProductPriceWrapper>
