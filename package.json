@@ -1,6 +1,6 @@
 {
   "name": "mayoral-test",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start:dev": "next dev",
@@ -61,6 +61,6 @@
       "prettier --write"
     ]
   },
-  "author": "Mayoral Moda Infantil S.A.U.",
+  "author": "Miguel Martínez",
   "license": "UNLICENSED"
 }
