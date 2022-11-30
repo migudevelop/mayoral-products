@@ -2,9 +2,13 @@ import { FC, memo } from 'react';
 import { SearchBar, ColumnsController, OrderElements } from 'components';
 import { HomeWrapper } from './styles';
 
-const HomeHeader: FC = () => (
+interface Props {
+  onSearch: (value: string) => void;
+}
+
+const HomeHeader: FC<Props> = ({ onSearch }) => (
   <HomeWrapper>
-    <SearchBar />
+    <SearchBar onSearch={onSearch} />
     <OrderElements />
     <ColumnsController />
   </HomeWrapper>
