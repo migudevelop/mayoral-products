@@ -10,7 +10,7 @@ export const SelectLabelButtonStyled = styled.button`
   border-radius: 8px;
   padding: 0.5rem;
   border: 2px solid #bfc2c7;
-  min-width: 7rem;
+  min-width: 10rem;
   font-weight: 500;
   background-color: #fff;
   color: #111;

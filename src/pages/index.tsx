@@ -1,9 +1,9 @@
 import { GetStaticProps, NextPage } from 'next';
 import { MainLayout, ProductCard, HomeHeader } from 'components';
 import { ProductsContainer, HomeWrapper } from 'styles';
-import { dbProducts } from 'database';
-import { ProductElement, ProductsResponse } from 'interfaces';
+import { ProductElement } from 'interfaces';
 import { useUiState } from 'providers';
+import { productsApi } from 'api';
 
 interface Props {
   products: ProductElement[];
@@ -26,7 +26,7 @@ const HomePage: NextPage<Props> = ({ products }) => {
 };
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const { products }: ProductsResponse = await dbProducts.getAllProducts();
+  const { products } = await productsApi.getAllProducts().then((res) => res.json());
 
   return {
     props: {
